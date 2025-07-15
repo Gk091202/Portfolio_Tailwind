@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaurav - Web Developer</title>
+  <link rel="icon" type="image/x-icon" href="https://www.favicon.cc/logo3d/461434.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+<!-- Navigation -->
+<div class="bg-white">
+    <header class="absolute inset-x-0 top-0 z-50">
+      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <!-- Logo -->
+        <div class="flex lg:flex-none">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Gaurav Koli</span>
+            <img class="h-15 w-23 rounded-full" src="1.png" alt="">
+          </a>
+        </div>
+  
+        <!-- Mobile Menu Button -->
+        <div class="flex lg:hidden">
+          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" id="hamburger-btn">
+            <span class="sr-only">Open main menu</span>
+            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+  
+        <!-- Navigation Links -->
+        <div class="hidden lg:flex lg:flex-1 lg:justify-center lg:gap-x-12">
+          <a href="index.html" class="text-sm font-semibold text-gray-900">Home</a>
+          <a href="blogs.html" class="text-sm font-semibold text-gray-900">Blogs</a>
+          <a href="aboutme.html" class="text-sm font-semibold text-gray-900">About Me</a>
+          <a href="contactme.html" class="text-sm font-semibold text-gray-900">Contact Me</a>
+        </div>
+      </nav>
+  
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-50" id="mobile-backdrop" style="display: none;"></div>
+        <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10" id="mobile-menu" style="display: none;">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img class="h-15 w-23" src="1.png" alt="">
+            </a>
+            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" id="close-btn">
+              <span class="sr-only">Close menu</span>
+              <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <a href="index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Home</a>
+                <a href="blogs.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Blogs</a>
+                <a href="aboutme.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">About Me</a>
+                <a href="contactme.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contact Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <script>
+        // Get the elements for the hamburger button, close button, and mobile menu
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileBackdrop = document.getElementById('mobile-backdrop');
+  
+        // Toggle the menu visibility when the hamburger button is clicked
+        hamburgerBtn.addEventListener('click', () => {
+          mobileMenu.style.display = 'block';
+          mobileBackdrop.style.display = 'block';
+        });
+  
+        // Close the menu when the close button or backdrop is clicked
+        closeBtn.addEventListener('click', () => {
+          mobileMenu.style.display = 'none';
+          mobileBackdrop.style.display = 'none';
+        });
+  
+        // Close the menu if the backdrop is clicked
+        mobileBackdrop.addEventListener('click', () => {
+          mobileMenu.style.display = 'none';
+          mobileBackdrop.style.display = 'none';
+        });
+      </script>
+    </header>
+  </div>
+  
+  
+<!-- Hero Section -->
+<div class="relative isolate px-6 pt-14 lg:px-8">
+  <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+    <div class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+      style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+  </div>
+
+  <!-- Adjusted Padding Here -->
+  <div class="mx-auto max-w-2xl py-20 sm:py-28 lg:py-36">
+    <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+      <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 hover:ring-gray-900/20"></div>
+    </div>
+    <div class="text-center">
+      <h1 class="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl fade-in">𝓛𝓮𝓽'𝓼 🚀</h1>
+      <h1 class="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-6xl fade-in">𝓖𝓻𝓸𝔀 𝓣𝓸𝓰𝓮𝓽𝓱𝓮𝓻</h1>
+
+<!-- Resume Modal (Background stays unchanged) -->
+<div id="resumeOverlay" class="fixed inset-0 z-50 hidden items-center justify-center">
+  <div onclick="closeResumeModal()" class="absolute inset-0"></div>
+
+  <div id="resumeModal" onclick="event.stopPropagation()" class="relative w-[90%] max-w-3xl h-[80%] transform rounded-lg border border-gray-300 bg-white shadow-2xl transition-all duration-300 ease-in-out opacity-0 scale-75">
+    <!-- Close Button -->
+    <div class="flex justify-end p-2">
+      <button onclick="closeResumeModal()" class="text-gray-600 hover:text-red-500 text-2xl font-bold">&times;</button>
+    </div>
+
+    <!-- PDF Viewer -->
+    <iframe src="resume.pdf" class="w-full h-full px-4 pb-4" frameborder="0"></iframe>
+  </div>
+</div>
+
+<!-- JS -->
+<script>
+  function openResumeModal() {
+    const overlay = document.getElementById('resumeOverlay');
+    const modal = document.getElementById('resumeModal');
+
+    overlay.classList.remove('hidden');
+    setTimeout(() => {
+      modal.classList.remove('opacity-0', 'scale-75');
+      modal.classList.add('opacity-100', 'scale-100');
+    }, 10);
+  }
+
+  function closeResumeModal() {
+    const overlay = document.getElementById('resumeOverlay');
+    const modal = document.getElementById('resumeModal');
+
+    modal.classList.remove('opacity-100', 'scale-100');
+    modal.classList.add('opacity-0', 'scale-75');
+
+    setTimeout(() => {
+      overlay.classList.add('hidden');
+    }, 300);
+  }
+</script>
+
+    </div>
+  </div>
+
+
+
+
+  <!-- Contact Section -->
+  <div class="isolate bg-white px-6 py-24 sm:py-3 lg:px-8">
+    <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]" aria-hidden="true">
+      <div class="relative left-1/2 -z-10 aspect-1155/678 w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    </div>
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Contact Me</h2>
+    </div>
+    <form action="https://formspree.io/f/xkgbvkqv" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
+      <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+        <div>
+          <label for="first-name" class="block text-sm font-semibold text-gray-900">First name</label>
+          <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-2.5 block w-full rounded-md border border-gray-300 px-3.5 py-2 text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+        </div>
+        <div>
+          <label for="last-name" class="block text-sm font-semibold text-gray-900">Last name</label>
+          <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="mt-2.5 block w-full rounded-md border border-gray-300 px-3.5 py-2 text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+        </div>
+        <div class="sm:col-span-2">
+          <label for="email" class="block text-sm font-semibold text-gray-900">Email</label>
+          <input type="email" name="email" id="email" autocomplete="email" class="mt-2.5 block w-full rounded-md border border-gray-300 px-3.5 py-2 text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+        </div>
+        <div class="sm:col-span-2">
+          <label for="message" class="block text-sm font-semibold text-gray-900">Message</label>
+          <textarea name="message" id="message" rows="4" class="mt-2.5 block w-full rounded-md border border-gray-300 px-3.5 py-2 text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600"></textarea>
+        </div>
+      </div>
+      <div class="mt-10">
+        <button type="submit" class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-white font-semibold shadow-sm hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600">Let's talk</button>
+      </div>
+    </form>
+  </div>
+              
+              <footer class="bg-white py-12">
+                <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                  <div class="text-center text-gray-950">
+                    <p class="text-lg font-medium">© 2025 GK. All rights reserved.</p>
+                    <p class="mt-4 text-sm">Built with ❤️ By Gaurav Koli</p>
+                  </div>
+                </div>
+              </footer>
+              
+          
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
