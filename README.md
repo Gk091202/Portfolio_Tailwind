@@ -47,13 +47,13 @@ git clone https://github.com/Gk091202/Portfolio_Tailwind.git
 cd Portfolio_Tailwind
 
 3. **Open in browser**
-** Just double-click index.html or open it via your browser. **
+Just double-click index.html or open it via your browser. 
 
 4. **Customize the content**
-** Update text, images, and links to make it your own. **
+Update text, images, and links to make it your own. 
 
 5. **Deploy (Optional)**
-** Deploy your  site using GitHub Pages, Netlify, or Vercel. **
+Deploy your  site using GitHub Pages, Netlify, or Vercel. 
 
 ---
 
