@@ -38,21 +38,21 @@ A sleek and modern portfolio website built with **Tailwind CSS**, showcasing my 
 
 ## 📌 How to Use
 
-1. **Clone the repository**
-** bash **
+1. **Clone the repository** -
+**bash** -
 git clone https://github.com/Gk091202/Portfolio_Tailwind.git
 
-2. **bash**
+2. **bash** - 
 
-cd Portfolio_Tailwind
+cd Portfolio_Tailwind 
 
-3. **Open in browser**
+3. **Open in browser** - 
 Just double-click index.html or open it via your browser. 
 
-4. **Customize the content**
+4. **Customize the content** -
 Update text, images, and links to make it your own. 
 
-5. **Deploy (Optional)**
+5. **Deploy (Optional)** -
 Deploy your  site using GitHub Pages, Netlify, or Vercel. 
 
 ---
