@@ -33,27 +33,6 @@ A sleek and modern portfolio website built with **Tailwind CSS**, showcasing my 
 - 💻 **VS Code**  
 - 🧠 **Git & GitHub**
 
----
-
-## 📁 Folder Structure
-
-Portfolio_Tailwind-5/
-├── 1.png, 11.png, 110.png, 1111.png        # Image assets
-├── aboutme.html                            # About Me page
-├── blog 1.html                             # Blog post 1
-├── blog 2.html                             # Blog post 2
-├── blogs.html                              # Blog listing page
-├── contactme.html                          # Contact Me page
-├── download.png                            # Download image
-├── git.png, git1.png                       # GitHub-related images
-├── index.html                              # Main homepage
-├── README.md                               # Project documentation
-├── resume.pdf                              # Resume file
-├── script.js                               # JavaScript for interactions
-├── styles.css                              # Tailwind CSS stylesheet
-├── LICENSE                                 # MIT License file
-
-
 
 ---
 
@@ -76,7 +55,7 @@ cd Portfolio_Tailwind
 5. **Deploy (Optional)**
 ** Deploy your  site using GitHub Pages, Netlify, or Vercel. **
 
--------------------------------------------------------------------------------------
+---
 
 MIT License
 
@@ -99,3 +78,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
 SOFTWARE.
+---
