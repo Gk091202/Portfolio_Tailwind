@@ -1,228 +1,848 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gaurav - Web Developer</title>
-  <link rel="icon" type="image/x-icon" href="https://www.favicon.cc/logo3d/461434.png">
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-  
-</head>
-<body>
-<!-- Navigation -->
-<div class="bg-white">
-    <header class="absolute inset-x-0 top-0 z-50">
-      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <!-- Logo -->
-        <div class="flex lg:flex-none">
-          <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Gaurav Koli</span>
-            <img class="h-15 w-23 rounded-full" src="1.png" alt="">
-          </a>
-        </div>
-  
-        <!-- Mobile Menu Button -->
-        <div class="flex lg:hidden">
-          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" id="hamburger-btn">
-            <span class="sr-only">Open main menu</span>
-            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-          </button>
-        </div>
-  
-        <!-- Navigation Links -->
-        <div class="hidden lg:flex lg:flex-1 lg:justify-center lg:gap-x-12">
-          <a href="index.html" class="text-sm font-semibold text-gray-900">Home</a>
-          <a href="blogs.html" class="text-sm font-semibold text-gray-900">Blogs</a>
-          <a href="aboutme.html" class="text-sm font-semibold text-gray-900">About Me</a>
-          <a href="contactme.html" class="text-sm font-semibold text-gray-900">Contact Me</a>
-        </div>
-      </nav>
-  
-      <!-- Mobile menu, show/hide based on menu open state. -->
-      <div class="lg:hidden" role="dialog" aria-modal="true">
-        <!-- Background backdrop, show/hide based on slide-over state. -->
-        <div class="fixed inset-0 z-50" id="mobile-backdrop" style="display: none;"></div>
-        <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10" id="mobile-menu" style="display: none;">
-          <div class="flex items-center justify-between">
-            <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Your Company</span>
-              <img class="h-15 w-23" src="1.png" alt="">
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Gaurav Koli - Content Creator | Let's Connect & Create Magic ✨🚀
+    </title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" href="favicon-16.svg" sizes="16x16" />
+    <link rel="shortcut icon" href="favicon.svg" />
+
+    <!-- Security Headers -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://formspree.io; frame-src 'self';"
+    />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="geolocation=(), microphone=(), camera=()"
+    />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Ready to transform your brand with compelling content? Let's connect! Gaurav Koli offers professional content writing, SEO services, and digital marketing solutions."
+    />
+    <meta
+      name="keywords"
+      content="Contact Gaurav Koli, Content Writing Services, SEO Expert, Digital Marketing, Brand Storytelling, Freelance Writer"
+    />
+    <meta name="author" content="Gaurav Koli" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              float: "float 6s ease-in-out infinite",
+              glow: "glow 2s ease-in-out infinite alternate",
+              "bounce-slow": "bounce 3s infinite",
+              "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              wiggle: "wiggle 1s ease-in-out infinite",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+      @keyframes glow {
+        from {
+          box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+        }
+        to {
+          box-shadow: 0 0 30px rgba(168, 85, 247, 0.6);
+        }
+      }
+      @keyframes wiggle {
+        0%,
+        7% {
+          transform: rotateZ(0);
+        }
+        15% {
+          transform: rotateZ(-15deg);
+        }
+        20% {
+          transform: rotateZ(10deg);
+        }
+        25% {
+          transform: rotateZ(-10deg);
+        }
+        30% {
+          transform: rotateZ(6deg);
+        }
+        35% {
+          transform: rotateZ(-4deg);
+        }
+        40%,
+        100% {
+          transform: rotateZ(0);
+        }
+      }
+      .gradient-text {
+        background: linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899, #06b6d4);
+        background-size: 300% 300%;
+        animation: gradient 3s ease infinite;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .form-input {
+        transition: all 0.3s ease;
+      }
+      .form-input:focus {
+        transform: scale(1.02);
+        box-shadow: 0 10px 25px rgba(168, 85, 247, 0.2);
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-gradient-to-br from-purple-50 via-pink-50 to-cyan-50 min-h-screen"
+  >
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-white/20"
+    >
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center"
+              >
+                <span class="text-white font-bold text-lg">G</span>
+              </div>
+              <span class="text-2xl font-bold gradient-text">Gaurav ✨</span>
             </a>
-            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" id="close-btn">
-              <span class="sr-only">Close menu</span>
-              <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button
+              type="button"
+              id="mobile-menu-open"
+              class="p-2 rounded-lg bg-purple-100 text-purple-600 hover:bg-purple-200 transition-colors duration-200"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
               </svg>
             </button>
           </div>
-          <div class="mt-6 flow-root">
-            <div class="-my-6 divide-y divide-gray-500/10">
-              <div class="space-y-2 py-6">
-                <a href="index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Home</a>
-                <a href="blogs.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Blogs</a>
-                <a href="aboutme.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">About Me</a>
-                <a href="contactme.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contact Me</a>
+
+          <!-- Desktop menu -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="index.html"
+              class="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-full font-medium transition-all duration-200"
+              >Home</a
+            >
+            <a
+              href="aboutme.html"
+              class="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-full font-medium transition-all duration-200"
+              >About</a
+            >
+            <a
+              href="blogs.html"
+              class="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-full font-medium transition-all duration-200"
+              >Blogs</a
+            >
+            <a
+              href="contactme.html"
+              class="px-4 py-2 text-purple-600 bg-purple-100 rounded-full font-medium transition-all duration-200 hover:bg-purple-200"
+              >Contact</a
+            >
+          </div>
+
+          <div class="hidden md:flex">
+            <a
+              href="#contact-form"
+              class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105"
+            >
+              Let's Connect 🚀
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+          <div
+            class="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-xl rounded-lg mt-2 border border-white/20"
+          >
+            <a
+              href="index.html"
+              class="block px-3 py-2 text-gray-700 hover:bg-purple-50 rounded-lg font-medium transition-colors duration-200"
+              >Home</a
+            >
+            <a
+              href="aboutme.html"
+              class="block px-3 py-2 text-gray-700 hover:bg-purple-50 rounded-lg font-medium transition-colors duration-200"
+              >About</a
+            >
+            <a
+              href="blogs.html"
+              class="block px-3 py-2 text-gray-700 hover:bg-purple-50 rounded-lg font-medium transition-colors duration-200"
+              >Blogs</a
+            >
+            <a
+              href="contactme.html"
+              class="block px-3 py-2 text-purple-600 bg-purple-100 rounded-lg font-medium"
+              >Contact</a
+            >
+            <div class="pt-2">
+              <a
+                href="#contact-form"
+                class="block bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center px-4 py-2 rounded-lg font-medium"
+              >
+                Let's Connect 🚀
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 relative overflow-hidden">
+      <!-- Background Elements -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div
+          class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-400/30 to-pink-400/30 rounded-full blur-3xl animate-pulse-slow"
+        ></div>
+        <div
+          class="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-blue-400/30 to-cyan-400/30 rounded-full blur-3xl animate-pulse-slow"
+          style="animation-delay: 2s"
+        ></div>
+        <div
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-full blur-3xl animate-pulse-slow"
+          style="animation-delay: 4s"
+        ></div>
+      </div>
+
+      <div class="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
+        <div
+          class="inline-flex items-center space-x-2 bg-white/70 backdrop-blur-xl px-4 py-2 rounded-full border border-white/20 mb-8"
+        >
+          <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
+          <span class="text-sm font-medium text-gray-600"
+            >Ready to collaborate</span
+          >
+        </div>
+
+        <h1 class="text-6xl lg:text-8xl font-bold mb-6">
+          <span class="block text-gray-900 mb-2">Let's</span>
+          <span class="block gradient-text animate-glow">Create Magic</span>
+          <span
+            class="block text-4xl lg:text-5xl text-gray-600 font-medium mt-4"
+            >Together! ✨🚀</span
+          >
+        </h1>
+
+        <p
+          class="text-xl lg:text-2xl text-gray-600 mb-8 leading-relaxed max-w-4xl mx-auto"
+        >
+          Ready to transform your brand with
+          <span class="font-bold text-purple-600">compelling content</span>?
+          Let's chat about your next big project and make some digital magic
+          happen! 💫
+        </p>
+
+        <!-- Quick Contact Options -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <a
+            href="#contact-form"
+            class="group bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl font-medium text-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 flex items-center justify-center space-x-2"
+          >
+            <span>📝</span>
+            <span>Send Message</span>
+          </a>
+
+          <a
+            href="mailto:gauravkoli464@gmail.com"
+            class="group bg-white/70 backdrop-blur-xl border border-white/20 text-gray-700 px-8 py-4 rounded-2xl font-medium text-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex items-center justify-center space-x-2"
+          >
+            <span>📧</span>
+            <span>Email Me</span>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/gaurav-koli-34400522a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group bg-white/70 backdrop-blur-xl border border-white/20 text-gray-700 px-8 py-4 rounded-2xl font-medium text-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex items-center justify-center space-x-2"
+          >
+            <span>🤝</span>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="py-20">
+      <div class="mx-auto max-w-4xl px-6 lg:px-8">
+        <div
+          class="bg-white/70 backdrop-blur-xl rounded-3xl border border-white/20 overflow-hidden"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-2">
+            <!-- Form Side -->
+            <div class="p-8 lg:p-12">
+              <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                Drop me a line! 📬
+              </h2>
+              <p class="text-gray-600 mb-8 leading-relaxed">
+                Got a project in mind? Need compelling content? Or just want to
+                say hello? I'd love to hear from you! Fill out the form and I'll
+                get back to you faster than you can say "SEO optimization"! 😄
+              </p>
+
+              <form
+                action="https://formspree.io/f/xkgbvkqv"
+                method="POST"
+                class="space-y-6"
+                id="contact-form-element"
+              >
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label
+                      for="first-name"
+                      class="block text-sm font-semibold text-gray-900 mb-2"
+                      >First Name ✨</label
+                    >
+                    <input
+                      type="text"
+                      name="first-name"
+                      id="first-name"
+                      required
+                      class="form-input w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-500 focus:ring-0 bg-white/80 backdrop-blur-sm"
+                      placeholder="Your first name"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="last-name"
+                      class="block text-sm font-semibold text-gray-900 mb-2"
+                      >Last Name 🌟</label
+                    >
+                    <input
+                      type="text"
+                      name="last-name"
+                      id="last-name"
+                      required
+                      class="form-input w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-500 focus:ring-0 bg-white/80 backdrop-blur-sm"
+                      placeholder="Your last name"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-semibold text-gray-900 mb-2"
+                    >Email Address 📧</label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                    class="form-input w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-500 focus:ring-0 bg-white/80 backdrop-blur-sm"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="project-type"
+                    class="block text-sm font-semibold text-gray-900 mb-2"
+                    >Project Type 🎯</label
+                  >
+                  <select
+                    name="project-type"
+                    id="project-type"
+                    class="form-input w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-500 focus:ring-0 bg-white/80 backdrop-blur-sm"
+                  >
+                    <option value="">Choose a project type</option>
+                    <option value="content-writing">📝 Content Writing</option>
+                    <option value="seo-optimization">
+                      🔍 SEO Optimization
+                    </option>
+                    <option value="blog-writing">📰 Blog Writing</option>
+                    <option value="copywriting">✏️ Copywriting</option>
+                    <option value="social-media">
+                      📱 Social Media Content
+                    </option>
+                    <option value="other">🚀 Other/Custom Project</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label
+                    for="message"
+                    class="block text-sm font-semibold text-gray-900 mb-2"
+                    >Your Message 💌</label
+                  >
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows="5"
+                    required
+                    class="form-input w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-500 focus:ring-0 bg-white/80 backdrop-blur-sm resize-none"
+                    placeholder="Tell me about your project, goals, timeline, or just say hi! I'm all ears 👂"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 px-8 rounded-xl font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] flex items-center justify-center space-x-2"
+                >
+                  <span>Send Message</span>
+                  <span class="animate-wiggle">🚀</span>
+                </button>
+              </form>
+            </div>
+
+            <!-- Info Side -->
+            <div
+              class="bg-gradient-to-br from-purple-600 to-pink-600 p-8 lg:p-12 text-white"
+            >
+              <h3 class="text-3xl font-bold mb-8">Let's Connect! 🌟</h3>
+
+              <div class="space-y-8">
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm"
+                  >
+                    <span class="text-2xl">📧</span>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-lg mb-2">Email Me</h4>
+                    <p class="opacity-90">gauravkoli464@gmail.com</p>
+                    <p class="text-sm opacity-75 mt-1">
+                      I usually respond within 24 hours!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm"
+                  >
+                    <span class="text-2xl">🤝</span>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-lg mb-2">LinkedIn</h4>
+                    <p class="opacity-90">Connect with me professionally</p>
+                    <a
+                      href="https://www.linkedin.com/in/gaurav-koli-34400522a/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-sm opacity-75 hover:opacity-100 underline mt-1 block"
+                      >View Profile →</a
+                    >
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm"
+                  >
+                    <span class="text-2xl">📱</span>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-lg mb-2">Instagram</h4>
+                    <p class="opacity-90">Follow my creative journey</p>
+                    <a
+                      href="https://www.instagram.com/gauravkoligk/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-sm opacity-75 hover:opacity-100 underline mt-1 block"
+                      >@gauravkoligk →</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Why Work With Me -->
+              <div class="mt-12 p-6 bg-white/10 rounded-2xl backdrop-blur-sm">
+                <h4 class="font-bold text-xl mb-4">Why Work With Me? 🎯</h4>
+                <ul class="space-y-2 text-sm opacity-90">
+                  <li class="flex items-center space-x-2">
+                    <span>✨</span>
+                    <span>18K+ LinkedIn followers trust my content</span>
+                  </li>
+                  <li class="flex items-center space-x-2">
+                    <span>⚡</span>
+                    <span>Fast turnaround without compromising quality</span>
+                  </li>
+                  <li class="flex items-center space-x-2">
+                    <span>🎯</span>
+                    <span>SEO-optimized content that ranks</span>
+                  </li>
+                  <li class="flex items-center space-x-2">
+                    <span>💰</span>
+                    <span>Content that converts visitors to customers</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-  
-      <script>
-        // Get the elements for the hamburger button, close button, and mobile menu
-        const hamburgerBtn = document.getElementById('hamburger-btn');
-        const closeBtn = document.getElementById('close-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileBackdrop = document.getElementById('mobile-backdrop');
-  
-        // Toggle the menu visibility when the hamburger button is clicked
-        hamburgerBtn.addEventListener('click', () => {
-          mobileMenu.style.display = 'block';
-          mobileBackdrop.style.display = 'block';
-        });
-  
-        // Close the menu when the close button or backdrop is clicked
-        closeBtn.addEventListener('click', () => {
-          mobileMenu.style.display = 'none';
-          mobileBackdrop.style.display = 'none';
-        });
-  
-        // Close the menu if the backdrop is clicked
-        mobileBackdrop.addEventListener('click', () => {
-          mobileMenu.style.display = 'none';
-          mobileBackdrop.style.display = 'none';
-        });
-      </script>
-    </header>
-  </div>
-  
-  
-<!-- Hero Section -->
-<div class="relative isolate px-6 pt-14 lg:px-8">
-  <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-    <div class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-      style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-  </div>
+    </section>
 
-  <!-- Adjusted Padding Here -->
-  <div class="mx-auto max-w-2xl py-20 sm:py-28 lg:py-36">
-    <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-      <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 hover:ring-gray-900/20"></div>
-    </div>
-    <div class="text-center">
-      <h1 class="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl fade-in">𝐿𝑒𝓉'𝓈 </h1>
-      <h1 class="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-6xl fade-in">𝒢𝓇𝑜𝓌 🚀</h1>
-
-<!-- Resume Modal (Background stays unchanged) -->
-<div id="resumeOverlay" class="fixed inset-0 z-50 hidden items-center justify-center">
-  <div onclick="closeResumeModal()" class="absolute inset-0"></div>
-
-  <div id="resumeModal" onclick="event.stopPropagation()" class="relative w-[90%] max-w-3xl h-[80%] transform rounded-lg border border-gray-300 bg-white shadow-2xl transition-all duration-300 ease-in-out opacity-0 scale-75">
-    <!-- Close Button -->
-    <div class="flex justify-end p-2">
-      <button onclick="closeResumeModal()" class="text-gray-600 hover:text-red-500 text-2xl font-bold">&times;</button>
-    </div>
-
-    <!-- PDF Viewer -->
-    <iframe src="resume.pdf" class="w-full h-full px-4 pb-4" frameborder="0"></iframe>
-  </div>
-</div>
-
-<!-- JS -->
-<script>
-  function openResumeModal() {
-    const overlay = document.getElementById('resumeOverlay');
-    const modal = document.getElementById('resumeModal');
-
-    overlay.classList.remove('hidden');
-    setTimeout(() => {
-      modal.classList.remove('opacity-0', 'scale-75');
-      modal.classList.add('opacity-100', 'scale-100');
-    }, 10);
-  }
-
-  function closeResumeModal() {
-    const overlay = document.getElementById('resumeOverlay');
-    const modal = document.getElementById('resumeModal');
-
-    modal.classList.remove('opacity-100', 'scale-100');
-    modal.classList.add('opacity-0', 'scale-75');
-
-    setTimeout(() => {
-      overlay.classList.add('hidden');
-    }, 300);
-  }
-</script>
-
-    </div>
-  </div>
-
-
-
-
-  <!-- Contact Section -->
-  <div class="isolate bg-white px-6 py-24 sm:py-3 lg:px-8">
-    <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]" aria-hidden="true">
-      <div class="relative left-1/2 -z-10 aspect-1155/678 w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-    </div>
-    <div class="mx-auto max-w-2xl text-center">
-      <h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">Contact Me</h2>
-    </div>
-    <form action="https://formspree.io/f/xkgbvkqv" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
-      <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-        <div>
-          <label for="first-name" class="block text-sm font-semibold text-gray-900">First name</label>
-          <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-2.5 block w-full rounded-md border border-gray-300 px-3.5 py-2 text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+    <!-- Services Preview -->
+    <section class="py-20 bg-white/30 backdrop-blur-xl">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span
+            class="inline-block px-4 py-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white text-sm font-medium rounded-full mb-4"
+            >💼 What I Offer</span
+          >
+          <h2 class="text-5xl font-bold text-gray-900 mb-6">
+            Services That Deliver Results 🎯
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            From compelling blog posts to conversion-focused copy, I create
+            content that drives real business results!
+          </p>
         </div>
-        <div>
-          <label for="last-name" class="block text-sm font-semibold text-gray-900">Last name</label>
-          <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="mt-2.5 block w-full rounded-md border border-gray-300 px-3.5 py-2 text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="group bg-white/70 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 text-center"
+          >
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300"
+            >
+              <span class="text-3xl text-white">📝</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Content Writing
+            </h3>
+            <p class="text-gray-600 mb-4">
+              High-quality blog posts, articles, and web content that engages
+              your audience and drives organic traffic.
+            </p>
+            <div class="text-purple-600 font-semibold">
+              Starting at $50/piece
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="group bg-white/70 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 text-center"
+          >
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300"
+            >
+              <span class="text-3xl text-white">🔍</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              SEO Optimization
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Keyword research, on-page SEO, and content optimization to help
+              your website rank higher on Google.
+            </p>
+            <div class="text-purple-600 font-semibold">
+              Starting at $100/project
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="group bg-white/70 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 text-center"
+          >
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300"
+            >
+              <span class="text-3xl text-white">✏️</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Copywriting</h3>
+            <p class="text-gray-600 mb-4">
+              Persuasive sales copy, email campaigns, and marketing materials
+              that convert visitors into customers.
+            </p>
+            <div class="text-purple-600 font-semibold">
+              Starting at $75/piece
+            </div>
+          </div>
         </div>
-        <div class="sm:col-span-2">
-          <label for="email" class="block text-sm font-semibold text-gray-900">Email</label>
-          <input type="email" name="email" id="email" autocomplete="email" class="mt-2.5 block w-full rounded-md border border-gray-300 px-3.5 py-2 text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600">
-        </div>
-        <div class="sm:col-span-2">
-          <label for="message" class="block text-sm font-semibold text-gray-900">Message</label>
-          <textarea name="message" id="message" rows="4" class="mt-2.5 block w-full rounded-md border border-gray-300 px-3.5 py-2 text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-600"></textarea>
+
+        <div class="text-center mt-12">
+          <a
+            href="#contact-form"
+            class="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl font-medium text-lg hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+          >
+            <span>Get Custom Quote</span>
+            <span class="text-xl">💰</span>
+          </a>
         </div>
       </div>
-      <div class="mt-10">
-        <button type="submit" class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-white font-semibold shadow-sm hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600">Let's talk</button>
-      </div>
-    </form>
-  </div>
-              
-<footer class="bg-white py-12">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="text-center text-gray-950">
-      <p class="text-lg font-medium">© 2025 GK. All rights reserved.</p>
-      <p class="mt-4 text-sm">Built with ❤️ By Gaurav Koli</p>
-      <div class="mt-4 flex justify-center space-x-6">
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/gaurav-koli-34400522a/" target="_blank" rel="noopener noreferrer" class="text-gray-950 hover:text-blue-600">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="inline-block" viewBox="0 0 24 24">
-            <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0h4.7v2.2h.1c.7-1.3 2.5-2.7 5.2-2.7 5.5 0 6.5 3.6 6.5 8.3V24h-5v-7.6c0-1.8 0-4.1-2.5-4.1-2.5 0-2.9 2-2.9 4V24h-5V8z"/>
-          </svg>
-        </a>
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/gauravkoligk/" target="_blank" rel="noopener noreferrer" class="text-gray-950 hover:text-pink-600">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="inline-block" viewBox="0 0 24 24">
-            <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.5.5.6.3 1.1.6 1.6 1.1.5.5.9 1 .9 1.6.3.5.4 1.3.5 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.5-.3.6-.6 1.1-1.1 1.6-.5.5-1 .9-1.6 1.1-.5.3-1.3.4-2.5.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.5-.5-.6-.3-1.1-.6-1.6-1.1-.5-.5-.9-1-.9-1.6-.3-.5-.4-1.3-.5-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.5.3-.6.6-1.1 1.1-1.6.5-.5 1-.9 1.6-1.1.5-.3 1.3-.4 2.5-.5C8.4 2.2 8.8 2.2 12 2.2M12 0C8.7 0 8.3 0 7 .1 5.7.1 4.6.3 3.8.6c-.9.3-1.7.7-2.4 1.4-.7.7-1.1 1.5-1.4 2.4C-.1 5.6-.1 6.7 0 8v8c-.1 1.3-.1 2.4.1 3.7.1.9.3 1.7.6 2.4.3.9.7 1.7 1.4 2.4.7.7 1.5 1.1 2.4 1.4.7.3 1.5.5 2.4.6 1.3.1 1.7.1 4.9.1s3.6 0 4.9-.1c1.2-.1 2-.3 2.5-.5.6-.3 1.1-.6 1.6-1.1.5-.5.9-1 .9-1.6.3-.5.4-1.3.5-2.5.1-1.3.1-1.7.1-4.9s0-3.6-.1-4.9c-.1-1.2-.3-2-.5-2.5-.3-.6-.6-1.1-1.1-1.6-.5-.5-1-.9-1.6-1.1-.5-.3-1.3-.4-2.5-.5C15.6.1 15.2 0 12 0zm0 5.8A6.2 6.2 0 1 0 18.2 12 6.19 6.19 0 0 0 12 5.8zm0 10.2A4 4 0 1 1 16 12a4 4 0 0 1-4 4.1zm6.4-10.9a1.44 1.44 0 1 1-1.4-1.4 1.44 1.44 0 0 1 1.4 1.4z"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</footer>
-              
-          
-  
+    </section>
 
-  <script src="script.js"></script>
-</body>
+    <!-- FAQ Section -->
+    <section class="py-20">
+      <div class="mx-auto max-w-4xl px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span
+            class="inline-block px-4 py-2 bg-gradient-to-r from-orange-600 to-red-600 text-white text-sm font-medium rounded-full mb-4"
+            >❓ FAQ</span
+          >
+          <h2 class="text-5xl font-bold text-gray-900 mb-6">
+            Got Questions? 🤔
+          </h2>
+          <p class="text-xl text-gray-600">
+            Here are some answers to help you out!
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <div
+            class="bg-white/70 backdrop-blur-xl rounded-2xl p-6 border border-white/20"
+          >
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              🚀 How quickly can you deliver content?
+            </h3>
+            <p class="text-gray-600">
+              Typically 3-7 business days depending on the project scope. Need
+              it faster? Let's chat about rush delivery options!
+            </p>
+          </div>
+
+          <div
+            class="bg-white/70 backdrop-blur-xl rounded-2xl p-6 border border-white/20"
+          >
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              💰 What are your rates?
+            </h3>
+            <p class="text-gray-600">
+              Rates vary by project type and complexity. Blog posts start at
+              $50, SEO projects at $100, and copywriting at $75. Contact me for
+              a custom quote!
+            </p>
+          </div>
+
+          <div
+            class="bg-white/70 backdrop-blur-xl rounded-2xl p-6 border border-white/20"
+          >
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              🔄 Do you offer revisions?
+            </h3>
+            <p class="text-gray-600">
+              Absolutely! I include 2 rounds of revisions with every project to
+              ensure you're 100% satisfied with the final result.
+            </p>
+          </div>
+
+          <div
+            class="bg-white/70 backdrop-blur-xl rounded-2xl p-6 border border-white/20"
+          >
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              🎯 What industries do you work with?
+            </h3>
+            <p class="text-gray-600">
+              I've worked across tech, healthcare, real estate, finance,
+              e-commerce, and more. Every industry has a story - I help tell it!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white/70 backdrop-blur-xl border-t border-white/20 py-12">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="text-center">
+          <div class="flex justify-center items-center space-x-2 mb-4">
+            <div
+              class="w-8 h-8 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center"
+            >
+              <span class="text-white font-bold">G</span>
+            </div>
+            <span class="text-xl font-bold gradient-text">Gaurav Koli</span>
+          </div>
+          <p class="text-lg font-medium mb-2 text-gray-900">
+            © 2025 GK. All rights reserved.
+          </p>
+          <p class="text-gray-600 mb-6">
+            Built with ❤️, lots of ☕, and a touch of ✨ magic
+          </p>
+
+          <div class="flex justify-center space-x-6">
+            <a
+              href="https://www.linkedin.com/in/gaurav-koli-34400522a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group bg-blue-50 p-4 rounded-2xl hover:bg-blue-100 transition-all duration-300 hover:-translate-y-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="text-blue-600 group-hover:scale-110 transition-transform duration-300"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0h4.7v2.2h.1c.7-1.3 2.5-2.7 5.2-2.7 5.5 0 6.5 3.6 6.5 8.3V24h-5v-7.6c0-1.8 0-4.1-2.5-4.1-2.5 0-2.9 2-2.9 4V24h-5V8z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/gauravkoligk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group bg-pink-50 p-4 rounded-2xl hover:bg-pink-100 transition-all duration-300 hover:-translate-y-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="text-pink-600 group-hover:scale-110 transition-transform duration-300"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.5.5.6.3 1.1.6 1.6 1.1.5.5.9 1 .9 1.6.3.5.4 1.3.5 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.5-.3.6-.6 1.1-1.1 1.6-.5.5-1 .9-1.6 1.1-.5.3-1.3.4-2.5.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.5-.5-.6-.3-1.1-.6-1.6-1.1-.5-.5-.9-1-.9-1.6-.3-.5-.4-1.3-.5-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.5.3-.6.6-1.1 1.1-1.6.5-.5 1-.9 1.6-1.1.5-.3 1.3-.4 2.5-.5C8.4 2.2 8.8 2.2 12 2.2M12 0C8.7 0 8.3 0 7 .1 5.7.1 4.6.3 3.8.6c-.9.3-1.7.7-2.4 1.4-.7.7-1.1 1.5-1.4 2.4C-.1 5.6-.1 6.7 0 8v8c-.1 1.3-.1 2.4.1 3.7.1.9.3 1.7.6 2.4.3.9.7 1.7 1.4 2.4.7.7 1.5 1.1 2.4 1.4.7.3 1.5.5 2.4.6 1.3.1 1.7.1 4.9.1s3.6 0 4.9-.1c1.2-.1 2-.3 2.5-.5.6-.3 1.1-.6 1.6-1.1.5-.5.9-1 .9-1.6.3-.5.4-1.3.5-2.5.1-1.3.1-1.7.1-4.9s0-3.6-.1-4.9c-.1-1.2-.3-2-.5-2.5-.3-.6-.6-1.1-1.1-1.6-.5-.5-1-.9-1.6-1.1-.5-.3-1.3-.4-2.5-.5C15.6.1 15.2 0 12 0zm0 5.8A6.2 6.2 0 1 0 18.2 12 6.19 6.19 0 0 0 12 5.8zm0 10.2A4 4 0 1 1 16 12a4 4 0 0 1-4 4.1zm6.4-10.9a1.44 1.44 0 1 1-1.4-1.4 1.44 1.44 0 0 1 1.4 1.4z"
+                />
+              </svg>
+            </a>
+            <a
+              href="mailto:gauravkoli464@gmail.com"
+              class="group bg-gray-50 p-4 rounded-2xl hover:bg-gray-100 transition-all duration-300 hover:-translate-y-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="text-gray-600 group-hover:scale-110 transition-transform duration-300"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-open")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+      // Form submission enhancement
+      document
+        .getElementById("contact-form-element")
+        .addEventListener("submit", function (e) {
+          const submitBtn = this.querySelector('button[type="submit"]');
+          const originalText = submitBtn.innerHTML;
+
+          submitBtn.innerHTML =
+            '<span>Sending...</span><span class="animate-spin">⏳</span>';
+          submitBtn.disabled = true;
+
+          // Reset after delay (form will actually submit)
+          setTimeout(() => {
+            submitBtn.innerHTML = "<span>Message Sent!</span><span>✅</span>";
+            setTimeout(() => {
+              submitBtn.innerHTML = originalText;
+              submitBtn.disabled = false;
+            }, 2000);
+          }, 1000);
+        });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Add form focus animations
+      const formInputs = document.querySelectorAll(".form-input");
+      formInputs.forEach((input) => {
+        input.addEventListener("focus", function () {
+          this.parentElement.classList.add("animate-pulse");
+        });
+
+        input.addEventListener("blur", function () {
+          this.parentElement.classList.remove("animate-pulse");
+        });
+      });
+
+      // Parallax effect for background elements
+      window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        const elements = document.querySelectorAll(".animate-pulse-slow");
+        elements.forEach((element, index) => {
+          const speed = 0.5 + index * 0.1;
+          element.style.transform = `translateY(${scrolled * speed}px)`;
+        });
+      });
+    </script>
+  </body>
 </html>
