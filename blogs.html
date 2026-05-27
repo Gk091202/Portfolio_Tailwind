@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="h-full">
   <head>
     <meta charset="UTF-8" />
@@ -163,6 +163,11 @@
               >About</a
             >
             <a
+              href="seo-results.html"
+              class="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-full font-medium transition-all duration-200"
+              >SEO Results</a
+            >
+            <a
               href="blogs.html"
               class="px-4 py-2 text-purple-600 bg-purple-100 rounded-full font-medium transition-all duration-200 hover:bg-purple-200"
               >Blogs</a
@@ -198,6 +203,11 @@
               href="aboutme.html"
               class="block px-3 py-2 text-gray-700 hover:bg-purple-50 rounded-lg font-medium transition-colors duration-200"
               >About</a
+            >
+            <a
+              href="seo-results.html"
+              class="block px-3 py-2 text-gray-700 hover:bg-purple-50 rounded-lg font-medium transition-colors duration-200"
+              >SEO Results</a
             >
             <a
               href="blogs.html"
@@ -1216,7 +1226,7 @@
       function initTheme() {
         const savedTheme = localStorage.getItem("theme");
         const systemPrefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)"
+          "(prefers-color-scheme: dark)",
         ).matches;
 
         if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {

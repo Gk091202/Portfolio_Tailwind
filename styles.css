@@ -92,11 +92,13 @@
 
 @keyframes glow {
   from {
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4),
+    box-shadow:
+      0 0 20px rgba(168, 85, 247, 0.4),
       0 0 30px rgba(168, 85, 247, 0.2);
   }
   to {
-    box-shadow: 0 0 30px rgba(168, 85, 247, 0.6),
+    box-shadow:
+      0 0 30px rgba(168, 85, 247, 0.6),
       0 0 40px rgba(168, 85, 247, 0.3);
   }
 }
@@ -223,7 +225,8 @@
 
 .hover-lift:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
@@ -566,7 +569,9 @@
 
 /* Dark Mode Background Transitions */
 body {
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .dark body {
@@ -698,7 +703,8 @@ body {
 
 /* Dark Mode Hover Effects */
 .dark .hover\:shadow-xl:hover {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3),
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.3),
     0 10px 10px -5px rgba(0, 0, 0, 0.2) !important;
 }
 
@@ -709,11 +715,13 @@ body {
 /* Dark Mode Animation Adjustments */
 @keyframes glow-dark {
   from {
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.6),
+    box-shadow:
+      0 0 20px rgba(168, 85, 247, 0.6),
       0 0 30px rgba(168, 85, 247, 0.4);
   }
   to {
-    box-shadow: 0 0 30px rgba(168, 85, 247, 0.8),
+    box-shadow:
+      0 0 30px rgba(168, 85, 247, 0.8),
       0 0 40px rgba(168, 85, 247, 0.5);
   }
 }
@@ -736,7 +744,9 @@ body {
 
 /* Dark Mode Transitions */
 * {
-  transition: background-color 0.3s ease, border-color 0.3s ease,
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
     color 0.3s ease;
 }
 
@@ -930,4 +940,166 @@ body {
 .dark .bg-white\/50 {
   background: rgba(255, 255, 255, 0.1) !important;
   color: var(--text-secondary) !important;
+}
+
+/* ===============================================
+   SEO RESULTS PAGE - DARK MODE ENHANCEMENTS
+   =============================================== */
+
+/* Dark Mode Text Colors for SEO Page */
+.dark section h1,
+.dark section h2,
+.dark section h3 {
+  color: var(--text-primary) !important;
+}
+
+.dark section p,
+.dark section span:not(.gradient-text) {
+  color: var(--text-secondary) !important;
+}
+
+/* Dark Mode Metric Cards */
+.dark .metric-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .metric-card:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.2) !important;
+}
+
+/* Dark Mode Chart Containers */
+.dark .chart-container {
+  background: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Dark Mode Case Study Cards */
+.dark .case-study-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .case-study-card:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark .case-study-header {
+  background: rgba(99, 102, 241, 0.1) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .case-study-header:hover {
+  background: rgba(99, 102, 241, 0.15) !important;
+}
+
+/* Dark Mode Gallery Items */
+.dark .gallery-item {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .gallery-item:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Dark Mode Gallery Modal */
+.dark .modal-gallery {
+  background: rgba(0, 0, 0, 0.95) !important;
+}
+
+.dark .modal-gallery-content {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Dark Mode Ranking Cards */
+.dark .ranking-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .ranking-card:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Dark Mode Badges */
+.dark .rank-badge {
+  background: rgba(99, 102, 241, 0.2) !important;
+  color: #a78bfa !important;
+  border: 1px solid rgba(167, 139, 250, 0.3) !important;
+}
+
+/* Dark Mode Timeline */
+.dark .timeline-item {
+  border-left: 2px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .timeline-dot {
+  background: rgba(99, 102, 241, 0.8) !important;
+  border: 2px solid rgba(99, 102, 241, 0.3) !important;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1) !important;
+}
+
+.dark .timeline-item:hover .timeline-dot {
+  background: rgba(99, 102, 241, 1) !important;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.4) !important;
+}
+
+.dark .timeline-content {
+  color: var(--text-secondary) !important;
+}
+
+.dark .timeline-title {
+  color: var(--text-primary) !important;
+}
+
+/* Dark Mode CTA Section */
+.dark .cta-section {
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.2) 0%,
+    rgba(236, 72, 153, 0.1) 100%
+  ) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Dark Mode Interactive Elements */
+.dark button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .btn-primary {
+  background: linear-gradient(45deg, #6366f1, #8b5cf6) !important;
+  color: white !important;
+}
+
+.dark .btn-primary:hover {
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3) !important;
+}
+
+.dark .btn-secondary {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: var(--text-primary) !important;
+}
+
+.dark .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Dark Mode Shadows for Better Depth */
+.dark .shadow-lg,
+.dark .hover\:shadow-lg:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark .shadow-xl,
+.dark .hover\:shadow-xl:hover {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark .shadow-2xl,
+.dark .hover\:shadow-2xl:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
 }
