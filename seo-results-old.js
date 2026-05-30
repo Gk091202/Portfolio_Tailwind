@@ -1,176 +1,6 @@
 // SEO Results Page - Interactive Features and Animations
 // ========================================================
 
-// Ranking Keywords Data
-const rankingKeywords = [
-  { keyword: "ideal ac temperature", position: 2 },
-  { keyword: "ac modes", position: 1 },
-  { keyword: "godrej ac remote functions", position: 2 },
-  { keyword: "ac automatically turns off", position: 3 },
-  { keyword: "daikin ac remote functions", position: 2 },
-  { keyword: "lg ac remote functions", position: 1 },
-  { keyword: "carrier ac remote functions", position: 3 },
-  { keyword: "mitsubishi ac remote functions", position: 2 },
-  { keyword: "ac electricity consumption", position: 1 },
-  { keyword: "voltas ac remote functions", position: 2 },
-  { keyword: "hitachi ac remote functions", position: 1 },
-  { keyword: "panasonic ac remote functions", position: 3 },
-  { keyword: "blue star ac remote functions", position: 2 },
-  { keyword: "ifb ac remote functions", position: 1 },
-  { keyword: "haier ac remote functions", position: 2 },
-  { keyword: "o general ac remote functions", position: 3 },
-  { keyword: "videocon ac remote functions", position: 1 },
-  { keyword: "kelvinator ac remote functions", position: 2 },
-  { keyword: "3 ton ac power consumption", position: 1 },
-  { keyword: "ac copper pipe size chart", position: 2 },
-  { keyword: "is air conditioner good for health", position: 3 },
-  { keyword: "1 ton ac room size", position: 1 },
-  { keyword: "1.5 ton ac room size", position: 1 },
-  { keyword: "split ac room size", position: 2 },
-  { keyword: "ac room size calculator", position: 1 },
-  { keyword: "daikin ac power consumption", position: 2 },
-  { keyword: "lg ac power consumption", position: 1 },
-  { keyword: "mitsubishi ac power consumption", position: 2 },
-  { keyword: "whirlpool ac power consumption", position: 3 },
-  { keyword: "ifb ac power consumption", position: 1 },
-  { keyword: "videocon ac power consumption", position: 2 },
-  { keyword: "gree ac power consumption", position: 1 },
-  { keyword: "burning smell from ac", position: 1 },
-  { keyword: "ac remote control symbols", position: 2 },
-  { keyword: "cool mode in ac", position: 1 },
-  { keyword: "auto mode in ac", position: 1 },
-  { keyword: "eco mode in ac", position: 2 },
-  { keyword: "turbo mode in ac", position: 1 },
-  { keyword: "heat mode in ac", position: 2 },
-  { keyword: "swing mode in ac", position: 1 },
-  { keyword: "silent mode in ac", position: 3 },
-  { keyword: "self clean mode in ac", position: 1 },
-  { keyword: "health mode in ac", position: 2 },
-  { keyword: "i-feel mode in ac", position: 1 },
-  { keyword: "timer mode in ac", position: 2 },
-  { keyword: "convertible mode in ac", position: 3 },
-  { keyword: "fan mode in ac", position: 1 },
-  { keyword: "blow mode in ac", position: 2 },
-];
-
-// Function to render keyword cards
-function renderKeywordCards() {
-  const container = document.getElementById("keyword-cards-container");
-  if (!container) return;
-
-  const colors = [
-    { bg: "from-purple-500 to-pink-500", text: "purple-600" },
-    { bg: "from-blue-500 to-cyan-500", text: "blue-600" },
-    { bg: "from-green-500 to-emerald-500", text: "green-600" },
-    { bg: "from-orange-500 to-red-500", text: "orange-600" },
-  ];
-
-  const initialDisplay = 8;
-  const hasMore = rankingKeywords.length > initialDisplay;
-  const displayedKeywords = rankingKeywords.slice(0, initialDisplay);
-
-  const html = displayedKeywords
-    .map((item, index) => {
-      const colorIndex = index % colors.length;
-      const color = colors[colorIndex];
-      const positionBadge = `#${item.position}`;
-
-      return `
-      <div class="group relative bg-white/70 dark:bg-white/10 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/20 hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 cursor-pointer" onclick="openGoogleSearch('${item.keyword.replace(/'/g, "\\'")}')">
-        <div class="absolute inset-0 bg-gradient-to-br ${color.bg} opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
-        <div class="relative p-5">
-          <div class="flex items-start justify-between mb-3">
-            <div class="w-10 h-10 bg-gradient-to-br ${color.bg} rounded-lg flex items-center justify-center flex-shrink-0">
-              <span class="text-white text-xs font-bold">${positionBadge}</span>
-            </div>
-            <div class="text-2xl font-bold bg-gradient-to-r ${color.bg} bg-clip-text text-transparent">↗</div>
-          </div>
-          <h3 class="text-sm font-bold text-gray-900 dark:text-white line-clamp-2 mb-3 leading-tight">
-            ${item.keyword}
-          </h3>
-          <div class="flex items-center justify-between">
-            <span class="text-xs text-gray-600 dark:text-gray-400 font-medium">Ranked on Google</span>
-            <svg class="w-4 h-4 text-gray-400 group-hover:text-${color.text} transition-colors">
-              <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
-              <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-    `;
-    })
-    .join("");
-
-  let content = `<div class="col-span-full"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">${html}</div>`;
-
-  if (hasMore) {
-    content += `
-      <div class="col-span-full flex justify-center mt-8">
-        <button onclick="toggleAllKeywords()" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-2xl font-bold hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-          See More Keywords (${rankingKeywords.length - initialDisplay} more)
-        </button>
-      </div>
-    `;
-  }
-
-  content += "</div>";
-  container.innerHTML = content;
-}
-
-// Function to toggle showing all keywords
-function toggleAllKeywords() {
-  const container = document.getElementById("keyword-cards-container");
-  if (!container) return;
-
-  const colors = [
-    { bg: "from-purple-500 to-pink-500", text: "purple-600" },
-    { bg: "from-blue-500 to-cyan-500", text: "blue-600" },
-    { bg: "from-green-500 to-emerald-500", text: "green-600" },
-    { bg: "from-orange-500 to-red-500", text: "orange-600" },
-  ];
-
-  const html = rankingKeywords
-    .map((item, index) => {
-      const colorIndex = index % colors.length;
-      const color = colors[colorIndex];
-      const positionBadge = `#${item.position}`;
-
-      return `
-      <div class="group relative bg-white/70 dark:bg-white/10 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/20 hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 cursor-pointer" onclick="openGoogleSearch('${item.keyword.replace(/'/g, "\\'")}')">
-        <div class="absolute inset-0 bg-gradient-to-br ${color.bg} opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
-        <div class="relative p-5">
-          <div class="flex items-start justify-between mb-3">
-            <div class="w-10 h-10 bg-gradient-to-br ${color.bg} rounded-lg flex items-center justify-center flex-shrink-0">
-              <span class="text-white text-xs font-bold">${positionBadge}</span>
-            </div>
-            <div class="text-2xl font-bold bg-gradient-to-r ${color.bg} bg-clip-text text-transparent">↗</div>
-          </div>
-          <h3 class="text-sm font-bold text-gray-900 dark:text-white line-clamp-2 mb-3 leading-tight">
-            ${item.keyword}
-          </h3>
-          <div class="flex items-center justify-between">
-            <span class="text-xs text-gray-600 dark:text-gray-400 font-medium">Ranked on Google</span>
-            <svg class="w-4 h-4 text-gray-400 group-hover:text-${color.text} transition-colors">
-              <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
-              <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-    `;
-    })
-    .join("");
-
-  const content = `<div class="col-span-full"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">${html}</div></div>`;
-  container.innerHTML = content;
-}
-
-// Function to open Google search for a keyword
-function openGoogleSearch(keyword) {
-  const query = encodeURIComponent(keyword);
-  window.open(`https://www.google.com/search?q=${query}`, "_blank");
-}
-
 // Chart configuration with consistent color scheme
 const chartConfig = {
   responsive: true,
@@ -264,9 +94,10 @@ function initializeCharts() {
         ],
         datasets: [
           {
-            label: "Published Content Growth",
+            label: "Organic Traffic",
             data: [
-              50, 120, 200, 320, 450, 580, 720, 850, 980, 1100, 1150, 1000,
+              1200, 1800, 2500, 3200, 4100, 5200, 6800, 8500, 10200, 13500,
+              16800, 21400,
             ],
             borderColor: gradientColor.purple,
             backgroundColor: "rgba(139, 92, 246, 0.05)",
@@ -300,11 +131,11 @@ function initializeCharts() {
     new Chart(keywordsCtx, {
       type: "bar",
       data: {
-        labels: ["Top 1", "Top 2-3", "Top 4-5", "Top 6-10", "All Rankings"],
+        labels: ["Top 3", "Top 10", "Top 20", "Top 50", "Top 100"],
         datasets: [
           {
-            label: "Keywords Ranking",
-            data: [15, 35, 50, 80, 100],
+            label: "Keywords in Position",
+            data: [156, 278, 412, 698, 1250],
             backgroundColor: [
               gradientColor.purple,
               gradientColor.pink,
@@ -356,8 +187,8 @@ function initializeCharts() {
         ],
         datasets: [
           {
-            label: "Content Pieces",
-            data: [50, 100, 180, 280, 420, 580, 750, 1000],
+            label: "Impressions",
+            data: [25000, 28000, 32000, 35000, 38000, 40000, 42000, 45000],
             borderColor: gradientColor.pink,
             backgroundColor: "rgba(236, 72, 153, 0.05)",
             borderWidth: 2,
@@ -370,8 +201,8 @@ function initializeCharts() {
             yAxisID: "y",
           },
           {
-            label: "First Page Keywords",
-            data: [5, 12, 22, 35, 50, 68, 85, 100],
+            label: "Clicks",
+            data: [1200, 1450, 1680, 1850, 2100, 2350, 2580, 2800],
             borderColor: gradientColor.blue,
             backgroundColor: "rgba(59, 130, 246, 0.05)",
             borderWidth: 2,
@@ -394,7 +225,7 @@ function initializeCharts() {
             position: "left",
             title: {
               display: true,
-              text: "Content Published",
+              text: "Impressions",
               color: gradientColor.pink,
               font: {
                 weight: 600,
@@ -409,7 +240,7 @@ function initializeCharts() {
             },
             title: {
               display: true,
-              text: "Keywords Ranked",
+              text: "Clicks",
               color: gradientColor.blue,
               font: {
                 weight: 600,
@@ -446,9 +277,10 @@ function initializeCharts() {
         ],
         datasets: [
           {
-            label: "2024",
+            label: "2023",
             data: [
-              50, 100, 180, 320, 500, 750, 1000, 1200, 1300, 1350, 1400, 1500,
+              2000, 2200, 2400, 2600, 2800, 3000, 3200, 3400, 3600, 3800, 4000,
+              4200,
             ],
             backgroundColor: "rgba(139, 92, 246, 0.3)",
             borderColor: gradientColor.purple,
@@ -457,9 +289,10 @@ function initializeCharts() {
             borderSkipped: false,
           },
           {
-            label: "2025",
+            label: "2024",
             data: [
-              80, 150, 280, 450, 720, 1100, 1500, 1850, 2100, 2350, 2600, 3000,
+              8500, 9200, 10200, 11500, 13000, 14500, 16000, 17500, 19000,
+              20500, 22000, 23500,
             ],
             backgroundColor: gradientColor.purple,
             borderRadius: 8,
@@ -628,9 +461,6 @@ function initScrollAnimations() {
 document.addEventListener("DOMContentLoaded", () => {
   // Initialize animations
   initScrollAnimations();
-
-  // Render keyword cards
-  renderKeywordCards();
 
   // Initialize count-up animations
   setTimeout(animateCountUp, 100);

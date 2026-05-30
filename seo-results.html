@@ -59,14 +59,16 @@
 
     <script>
       // Initialize theme on page load (before content renders)
-      (function() {
-        const savedTheme = localStorage.getItem('theme');
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        
-        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-          document.documentElement.classList.add('dark');
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        const systemPrefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+
+        if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
+          document.documentElement.classList.add("dark");
         } else {
-          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.remove("dark");
         }
       })();
     </script>
@@ -357,27 +359,27 @@
           <div class="hidden md:flex items-center space-x-8">
             <a
               href="index.html"
-              class="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 rounded-full font-medium transition-all duration-200"
+              class="px-4 py-2 text-gray-900 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 rounded-full font-medium transition-all duration-200"
               >Home</a
             >
             <a
               href="aboutme.html"
-              class="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 rounded-full font-medium transition-all duration-200"
+              class="px-4 py-2 text-gray-900 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 rounded-full font-medium transition-all duration-200"
               >About</a
             >
             <a
               href="seo-results.html"
-              class="px-4 py-2 text-purple-600 dark:text-purple-400 bg-purple-100 dark:bg-purple-900/30 rounded-full font-medium transition-all duration-200"
+              class="px-4 py-2 text-purple-600 dark:text-purple-400 bg-gray-200 dark:bg-purple-900/30 rounded-full font-medium transition-all duration-200"
               >SEO Results</a
             >
             <a
               href="blogs.html"
-              class="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 rounded-full font-medium transition-all duration-200"
-              >Blogs</aa
+              class="px-4 py-2 text-gray-900 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 rounded-full font-medium transition-all duration-200"
+              >Blogs</a
             >
             <a
               href="contactme.html"
-              class="px-4 py-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-full font-medium transition-all duration-200"
+              class="px-4 py-2 text-gray-900 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 rounded-full font-medium transition-all duration-200"
               >Contact</a
             >
           </div>
@@ -468,9 +470,9 @@
             class="text-6xl lg:text-8xl font-bold mb-6 animate-slideUp"
             style="animation-delay: 0.2s"
           >
-            <span class="block text-gray-900 mb-2">My SEO</span>
+            <span class="block text-gray-900 mb-2">Content That Ranks.</span>
             <span class="block gradient-text animate-glow"
-              >Achievements</span
+              >Traffic That Converts.</span
             >
           </h1>
 
@@ -478,9 +480,10 @@
             class="text-xl lg:text-2xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto animate-slideUp"
             style="animation-delay: 0.3s"
           >
-            Proven keyword rankings, real organic traffic, and measurable
-            results from data-driven content strategies. See the numbers that
-            speak for themselves.
+            Over 1,000+ published articles, service pages, and SEO-focused
+            content pieces helping businesses capture first-page rankings,
+            organic traffic, and visibility across Google Search and AI-powered
+            search experiences.
           </p>
 
           <div
@@ -488,7 +491,7 @@
             style="animation-delay: 0.4s"
           >
             <a
-              href="#seo-dashboard"
+              href="#ranking-showcase"
               class="group bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl font-medium text-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 inline-flex items-center justify-center space-x-2"
             >
               <svg
@@ -504,7 +507,7 @@
                   d="M13 7H6v10h7V7zM13 17H6v4h7v-4zM18 7h7v10h-7V7zM18 17h7v4h-7v-4z"
                 ></path>
               </svg>
-              <span>View Dashboard</span>
+              <span>View Ranking Keywords</span>
             </a>
 
             <a
@@ -524,7 +527,7 @@
                   d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
                 ></path>
               </svg>
-              <span>Let's Collaborate</span>
+              <span>Contact Me</span>
             </a>
           </div>
         </div>
@@ -540,19 +543,20 @@
             >📊 Analytics Dashboard</span
           >
           <h2 class="text-5xl font-bold text-gray-900 mb-6">
-            SEO Metrics That Matter ✨
+            My Content Writing & SEO Achievements ✨
           </h2>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Real data from Google Search Console, Ahrefs, and Google Analytics
-            showing the tangible impact of strategic content optimization.
+            1000+ published content pieces, 100+ first-page rankings, and
+            content referenced in Google's AI-powered search experiences.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Keywords Ranked Card -->
+          <!-- Published Content Card -->
           <div
             class="group bg-white/70 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 text-center metric-card"
-            data-target="1250"
+            data-target="1000"
+            data-suffix="+"
           >
             <div
               class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300"
@@ -575,15 +579,18 @@
               0
             </div>
             <h3 class="text-xl font-bold text-gray-900 mb-2">
-              Keywords Ranked
+              Published Content
             </h3>
-            <p class="text-gray-600">Ranking in top 100 search results</p>
+            <p class="text-gray-600">
+              Articles, blogs, service pages, and SEO landing pages written.
+            </p>
           </div>
 
-          <!-- Organic Traffic Card -->
+          <!-- First Page Rankings Card -->
           <div
             class="group bg-white/70 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 text-center metric-card"
-            data-target="87000"
+            data-target="100"
+            data-suffix="+"
           >
             <div
               class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300"
@@ -602,20 +609,20 @@
                 ></path>
               </svg>
             </div>
-            <div class="metric-number text-5xl font-bold text-green-600 mb-2">
+            <div class="metric-number text-6xl font-bold text-green-600 mb-2">
               0
             </div>
-            <p class="text-gray-600 mb-2">+</p>
             <h3 class="text-xl font-bold text-gray-900 mb-2">
-              Organic Traffic
+              First Page Rankings
             </h3>
-            <p class="text-gray-600">Monthly visitors from search</p>
+            <p class="text-gray-600">Keywords ranking on Google's first page</p>
           </div>
 
-          <!-- Total Impressions Card -->
+          <!-- Top 4 Rankings Card -->
           <div
             class="group bg-white/70 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 text-center metric-card"
-            data-target="2400000"
+            data-target="50"
+            data-suffix="+"
           >
             <div
               class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300"
@@ -640,20 +647,20 @@
                 ></path>
               </svg>
             </div>
-            <div class="metric-number text-5xl font-bold text-pink-600 mb-2">
+            <div class="metric-number text-6xl font-bold text-pink-600 mb-2">
               0
             </div>
-            <p class="text-gray-600 mb-2">+</p>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">
-              Total Impressions
-            </h3>
-            <p class="text-gray-600">Times my content appeared in search</p>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Top 4 Rankings</h3>
+            <p class="text-gray-600">
+              Keywords ranking between positions #1 and #4
+            </p>
           </div>
 
-          <!-- Page #1 Rankings Card -->
+          <!-- Content Categories Card -->
           <div
             class="group bg-white/70 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 text-center metric-card"
-            data-target="156"
+            data-target="20"
+            data-suffix="+"
           >
             <div
               class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300"
@@ -672,15 +679,16 @@
               0
             </div>
             <h3 class="text-xl font-bold text-gray-900 mb-2">
-              Articles on Page #1
+              Content Categories
             </h3>
-            <p class="text-gray-600">Ranking in top 10 positions</p>
+            <p class="text-gray-600">
+              Industries and service verticals covered
+            </p>
           </div>
 
-          <!-- Featured Snippets Card -->
+          <!-- Google AI Visibility Card -->
           <div
-            class="group bg-white/70 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 text-center metric-card"
-            data-target="34"
+            class="group bg-white/70 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 text-center"
           >
             <div
               class="w-16 h-16 bg-gradient-to-br from-red-500 to-rose-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300"
@@ -699,19 +707,19 @@
                 ></path>
               </svg>
             </div>
-            <div class="metric-number text-6xl font-bold text-red-600 mb-2">
-              0
-            </div>
+            <div class="text-4xl font-bold text-red-600 mb-2">✓</div>
             <h3 class="text-xl font-bold text-gray-900 mb-2">
-              Featured Snippets
+              Google AI Visibility
             </h3>
-            <p class="text-gray-600">Google's "Position Zero" wins</p>
+            <p class="text-gray-600">
+              Content referenced in AI-powered search summaries
+            </p>
           </div>
 
-          <!-- CTR Improvement Card -->
+          <!-- SEO Focus Card -->
           <div
             class="group bg-white/70 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 text-center metric-card"
-            data-target="45"
+            data-target="100"
             data-suffix="%"
           >
             <div
@@ -734,91 +742,8 @@
             <div class="metric-number text-6xl font-bold text-indigo-600 mb-2">
               0
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">
-              CTR Improvement
-            </h3>
-            <p class="text-gray-600">Average increase in click-through rate</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Growth Graphs Section -->
-    <section class="py-20 bg-white/30 backdrop-blur-xl">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <span
-            class="inline-block px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium rounded-full mb-4"
-            >📈 Growth Visualization</span
-          >
-          <h2 class="text-5xl font-bold text-gray-900 mb-6">
-            Track the Upward Trajectory 🚀
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Visual representation of organic traffic growth, keyword
-            improvements, and ranking progress over time.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <!-- Organic Traffic Growth Chart -->
-          <div
-            class="bg-white/70 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:shadow-xl transition-all duration-300"
-          >
-            <h3 class="text-2xl font-bold text-gray-900 mb-6">
-              Organic Traffic Growth
-            </h3>
-            <div class="chart-container">
-              <canvas id="trafficChart"></canvas>
-            </div>
-            <p class="text-sm text-gray-600 mt-4">
-              📊 Monthly organic visitors showing consistent upward growth trend
-            </p>
-          </div>
-
-          <!-- Keyword Rankings Progress Chart -->
-          <div
-            class="bg-white/70 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:shadow-xl transition-all duration-300"
-          >
-            <h3 class="text-2xl font-bold text-gray-900 mb-6">
-              Keywords Rankings Progress
-            </h3>
-            <div class="chart-container">
-              <canvas id="keywordsChart"></canvas>
-            </div>
-            <p class="text-sm text-gray-600 mt-4">
-              📊 Growth in keywords ranking across different positions
-            </p>
-          </div>
-
-          <!-- Impressions vs Clicks Chart -->
-          <div
-            class="bg-white/70 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:shadow-xl transition-all duration-300"
-          >
-            <h3 class="text-2xl font-bold text-gray-900 mb-6">
-              Impressions vs Clicks
-            </h3>
-            <div class="chart-container">
-              <canvas id="impressionsChart"></canvas>
-            </div>
-            <p class="text-sm text-gray-600 mt-4">
-              📊 Search impressions compared to actual clicks (CTR trend)
-            </p>
-          </div>
-
-          <!-- Monthly Traffic Growth Chart -->
-          <div
-            class="bg-white/70 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:shadow-xl transition-all duration-300"
-          >
-            <h3 class="text-2xl font-bold text-gray-900 mb-6">
-              Monthly Traffic Comparison
-            </h3>
-            <div class="chart-container">
-              <canvas id="monthlyChart"></canvas>
-            </div>
-            <p class="text-sm text-gray-600 mt-4">
-              📊 Year-over-year comparison showing consistent growth
-            </p>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">SEO Focus</h3>
+            <p class="text-gray-600">Search intent optimized content</p>
           </div>
         </div>
       </div>
@@ -833,419 +758,102 @@
             >🏆 Google Rankings</span
           >
           <h2 class="text-5xl font-bold text-gray-900 mb-6">
-            Top Keyword Rankings 📍
+            Real Keywords Ranking on Google 📍
           </h2>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Showcase of high-value keywords with strong Google rankings and
-            consistent organic traffic.
+            Verified keywords with strong Google rankings, verified through
+            direct search results. Click any keyword to check the ranking on
+            Google.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Ranking Card 1 -->
-          <div
-            class="group bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/20 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-          >
-            <div
-              class="h-40 bg-gradient-to-br from-purple-500 to-pink-500 relative overflow-hidden"
-            >
-              <div
-                class="absolute inset-0 opacity-20"
-                style="
-                  background-image: url(&quot;data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22white%22 opacity=%220.1%22/></svg>&quot;);
-                "
-              ></div>
-              <div
-                class="absolute top-4 right-4 bg-white/90 px-4 py-2 rounded-full"
-              >
-                <span class="text-2xl font-bold text-purple-600">#1</span>
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-2xl font-bold text-gray-900 mb-3">
-                Content Writing Services
-              </h3>
-              <div class="space-y-3 mb-6">
-                <div class="flex items-center justify-between">
-                  <span class="text-gray-600">Monthly Traffic:</span>
-                  <span class="font-bold text-purple-600">2,400+ visits</span>
-                </div>
-                <div class="flex items-center justify-between">
-                  <span class="text-gray-600">Impressions:</span>
-                  <span class="font-bold text-pink-600">45,000+</span>
-                </div>
-                <div class="flex items-center justify-between">
-                  <span class="text-gray-600">CTR:</span>
-                  <span class="font-bold text-blue-600">5.3%</span>
-                </div>
-              </div>
-              <p class="text-gray-600 text-sm mb-6">
-                Ranking for this high-volume keyword resulted in consistent
-                client inquiries and established authority.
-              </p>
-              <button
-                onclick="openGalleryModal('1.png')"
-                class="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-              >
-                View SERP Screenshot
-              </button>
-            </div>
-          </div>
-
-          <!-- Ranking Card 2 -->
-          <div
-            class="group bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/20 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-          >
-            <div
-              class="h-40 bg-gradient-to-br from-green-500 to-emerald-500 relative overflow-hidden"
-            >
-              <div
-                class="absolute inset-0 opacity-20"
-                style="
-                  background-image: url(&quot;data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22white%22 opacity=%220.1%22/></svg>&quot;);
-                "
-              ></div>
-              <div
-                class="absolute top-4 right-4 bg-white/90 px-4 py-2 rounded-full"
-              >
-                <span class="text-2xl font-bold text-green-600">#2</span>
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-2xl font-bold text-gray-900 mb-3">
-                SEO Best Practices
-              </h3>
-              <div class="space-y-3 mb-6">
-                <div class="flex items-center justify-between">
-                  <span class="text-gray-600">Monthly Traffic:</span>
-                  <span class="font-bold text-green-600">1,800+ visits</span>
-                </div>
-                <div class="flex items-center justify-between">
-                  <span class="text-gray-600">Impressions:</span>
-                  <span class="font-bold text-emerald-600">38,000+</span>
-                </div>
-                <div class="flex items-center justify-between">
-                  <span class="text-gray-600">CTR:</span>
-                  <span class="font-bold text-blue-600">4.7%</span>
-                </div>
-              </div>
-              <p class="text-gray-600 text-sm mb-6">
-                Comprehensive guide that became go-to resource for SEO
-                professionals and content marketers.
-              </p>
-              <button
-                onclick="openGalleryModal('11.png')"
-                class="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-              >
-                View SERP Screenshot
-              </button>
-            </div>
-          </div>
-
-          <!-- Ranking Card 3 -->
-          <div
-            class="group bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/20 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-          >
-            <div
-              class="h-40 bg-gradient-to-br from-blue-500 to-cyan-500 relative overflow-hidden"
-            >
-              <div
-                class="absolute inset-0 opacity-20"
-                style="
-                  background-image: url(&quot;data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22white%22 opacity=%220.1%22/></svg>&quot;);
-                "
-              ></div>
-              <div
-                class="absolute top-4 right-4 bg-white/90 px-4 py-2 rounded-full"
-              >
-                <span class="text-2xl font-bold text-blue-600">#3</span>
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-2xl font-bold text-gray-900 mb-3">
-                Digital Marketing Strategy
-              </h3>
-              <div class="space-y-3 mb-6">
-                <div class="flex items-center justify-between">
-                  <span class="text-gray-600">Monthly Traffic:</span>
-                  <span class="font-bold text-blue-600">1,550+ visits</span>
-                </div>
-                <div class="flex items-center justify-between">
-                  <span class="text-gray-600">Impressions:</span>
-                  <span class="font-bold text-cyan-600">32,000+</span>
-                </div>
-                <div class="flex items-center justify-between">
-                  <span class="text-gray-600">CTR:</span>
-                  <span class="font-bold text-blue-600">4.8%</span>
-                </div>
-              </div>
-              <p class="text-gray-600 text-sm mb-6">
-                Strategic guide covering modern digital marketing approaches,
-                attracting agencies and enterprises.
-              </p>
-              <button
-                onclick="openGalleryModal('110.png')"
-                class="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-              >
-                View SERP Screenshot
-              </button>
-            </div>
-          </div>
-        </div>
+        <!-- Keywords Grid -->
+        <div id="keyword-cards-container"></div>
       </div>
     </section>
 
-    <!-- SEO Case Studies Section -->
-    <section class="py-20 bg-white/30 backdrop-blur-xl">
+    <!-- AI Overview Section -->
+    <section class="py-20">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="text-center mb-16">
           <span
-            class="inline-block px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-medium rounded-full mb-4"
-            >💼 Case Studies</span
+            class="inline-block px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 text-white text-sm font-medium rounded-full mb-4"
+            >🤖 Google AI Integration</span
           >
           <h2 class="text-5xl font-bold text-gray-900 mb-6">
-            Real Success Stories 🎯
+            My Content in Google's AI Search 🧠
           </h2>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Detailed case studies showing SEO strategies, implementation, and
-            measurable results. Click to expand and dive deep.
+            Content created by me is frequently referenced within Google's
+            AI-powered search experience and AI-generated summaries.
           </p>
         </div>
 
-        <div class="space-y-6">
-          <!-- Case Study 1 -->
+        <div class="max-w-3xl mx-auto">
           <div
-            class="bg-white/70 backdrop-blur-xl rounded-3xl border border-white/20 overflow-hidden hover:shadow-xl transition-all duration-300"
+            class="bg-white/70 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-white/20 hover:shadow-xl transition-all duration-300"
           >
-            <div
-              class="case-study-header p-6 md:p-8 flex justify-between items-center cursor-pointer"
-              onclick="toggleCaseStudy(this)"
-            >
-              <div class="flex-1">
-                <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-                  📝 Technical Content Writing - 3 Month Campaign
-                </h3>
-                <p class="text-gray-600">
-                  <span
-                    class="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm mr-3 mb-2"
-                    >12 Articles Published</span
-                  >
-                  <span
-                    class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm mr-3 mb-2"
-                    >156 Keywords Ranked</span
-                  >
-                  <span
-                    class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm mb-2"
-                    >18,500 Monthly Traffic</span
-                  >
-                </p>
-              </div>
-              <span
-                class="expand-icon text-3xl text-purple-600 ml-4 flex-shrink-0"
-                >▼</span
-              >
-            </div>
-
-            <div class="case-study-body border-t border-white/20">
-              <div class="p-6 md:p-8 space-y-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 class="font-bold text-gray-900 mb-3">
-                      🎯 SEO Strategy
-                    </h4>
-                    <ul class="space-y-2 text-gray-700">
-                      <li>✓ Deep keyword research targeting long-tail terms</li>
-                      <li>✓ Comprehensive content clusters</li>
-                      <li>✓ Internal linking strategy</li>
-                      <li>✓ Schema markup implementation</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900 mb-3">
-                      📊 Results Achieved
-                    </h4>
-                    <ul class="space-y-2 text-gray-700">
-                      <li>✓ Average ranking position: #8</li>
-                      <li>✓ 45% increase in CTR</li>
-                      <li>✓ 156 new keywords ranking</li>
-                      <li>✓ 18,500+ monthly organic visits</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div>
-                  <h4 class="font-bold text-gray-900 mb-3">
-                    Content Topics Covered
-                  </h4>
-                  <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-                    <span
-                      class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium"
-                      >API Integration</span
-                    >
-                    <span
-                      class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium"
-                      >Database Design</span
-                    >
-                    <span
-                      class="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium"
-                      >Web Performance</span
-                    >
-                    <span
-                      class="px-4 py-2 bg-pink-100 text-pink-700 rounded-full text-sm font-medium"
-                      >Security Best Practices</span
-                    >
-                    <span
-                      class="px-4 py-2 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium"
-                      >Code Architecture</span
-                    >
-                    <span
-                      class="px-4 py-2 bg-cyan-100 text-cyan-700 rounded-full text-sm font-medium"
-                      >DevOps Guide</span
-                    >
-                  </div>
-                </div>
-
+            <div class="flex flex-col md:flex-row items-start gap-8">
+              <div class="flex-shrink-0">
                 <div
-                  class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-6"
+                  class="flex items-center justify-center h-16 w-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600"
                 >
-                  <h4 class="font-bold text-gray-900 mb-3">
-                    📈 Before & After
-                  </h4>
-                  <div class="grid grid-cols-2 gap-4">
-                    <div>
-                      <p class="text-sm text-gray-600 mb-1">Before Campaign</p>
-                      <p class="text-2xl font-bold text-gray-400">2 articles</p>
-                      <p class="text-xs text-gray-500">Monthly traffic: 0</p>
-                    </div>
-                    <div>
-                      <p class="text-sm text-gray-600 mb-1">After 3 Months</p>
-                      <p class="text-2xl font-bold text-purple-600">
-                        12 articles
-                      </p>
-                      <p class="text-xs text-gray-500">
-                        Monthly traffic: 18,500+
-                      </p>
-                    </div>
-                  </div>
+                  <svg
+                    class="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                    ></path>
+                  </svg>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <!-- Case Study 2 -->
-          <div
-            class="bg-white/70 backdrop-blur-xl rounded-3xl border border-white/20 overflow-hidden hover:shadow-xl transition-all duration-300"
-          >
-            <div
-              class="case-study-header p-6 md:p-8 flex justify-between items-center cursor-pointer"
-              onclick="toggleCaseStudy(this)"
-            >
               <div class="flex-1">
-                <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-                  🔍 SEO Optimization - Website Overhaul
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                  Content That Powers AI Search
                 </h3>
-                <p class="text-gray-600">
-                  <span
-                    class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm mr-3 mb-2"
-                    >34 Articles Optimized</span
-                  >
-                  <span
-                    class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm mr-3 mb-2"
-                    >4 Featured Snippets</span
-                  >
-                  <span
-                    class="inline-block px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm mb-2"
-                    >230% Traffic Growth</span
-                  >
+                <p class="text-gray-700 mb-6 leading-relaxed">
+                  When users search on Google, AI-generated summaries often rely
+                  on information from pages I have written and optimized. This
+                  demonstrates topical authority, search relevance, high-quality
+                  content structure, and trustworthy information architecture.
                 </p>
-              </div>
-              <span
-                class="expand-icon text-3xl text-green-600 ml-4 flex-shrink-0"
-                >▼</span
-              >
-            </div>
-
-            <div class="case-study-body border-t border-white/20">
-              <div class="p-6 md:p-8 space-y-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 class="font-bold text-gray-900 mb-3">
-                      🎯 Optimization Focus
-                    </h4>
-                    <ul class="space-y-2 text-gray-700">
-                      <li>✓ Title & meta description optimization</li>
-                      <li>✓ Header structure & keyword placement</li>
-                      <li>✓ Featured snippet optimization</li>
-                      <li>✓ Content gap analysis & expansion</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900 mb-3">
-                      📊 Results Achieved
-                    </h4>
-                    <ul class="space-y-2 text-gray-700">
-                      <li>✓ 230% organic traffic increase</li>
-                      <li>✓ 4 featured snippets captured</li>
-                      <li>✓ 89 keywords moved to page 1</li>
-                      <li>✓ 67% improvement in average ranking</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div>
-                  <h4 class="font-bold text-gray-900 mb-3">Topics Optimized</h4>
-                  <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-                    <span
-                      class="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium"
-                      >Product Guides</span
-                    >
-                    <span
-                      class="px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium"
-                      >How-To Tutorials</span
-                    >
-                    <span
-                      class="px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-medium"
-                      >Comparison Posts</span
-                    >
-                    <span
-                      class="px-4 py-2 bg-cyan-100 text-cyan-700 rounded-full text-sm font-medium"
-                      >FAQ Optimization</span
-                    >
-                    <span
-                      class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium"
-                      >List Articles</span
-                    >
-                    <span
-                      class="px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium"
-                      >Resource Pages</span
-                    >
-                  </div>
-                </div>
-
-                <div
-                  class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-6"
-                >
-                  <h4 class="font-bold text-gray-900 mb-3">
-                    📈 Before & After
-                  </h4>
-                  <div class="grid grid-cols-2 gap-4">
-                    <div>
-                      <p class="text-sm text-gray-600 mb-1">
-                        Before Optimization
-                      </p>
-                      <p class="text-2xl font-bold text-gray-400">8,000</p>
-                      <p class="text-xs text-gray-500">
-                        Monthly organic traffic
-                      </p>
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="p-4 bg-purple-50 rounded-lg">
+                    <div class="text-sm text-purple-600 font-semibold">
+                      Topical Authority
                     </div>
-                    <div>
-                      <p class="text-sm text-gray-600 mb-1">
-                        After Optimization
-                      </p>
-                      <p class="text-2xl font-bold text-green-600">26,400+</p>
-                      <p class="text-xs text-gray-500">
-                        Monthly organic traffic
-                      </p>
+                    <div class="text-xs text-gray-600 mt-1">
+                      Deep expertise in subject matter
+                    </div>
+                  </div>
+                  <div class="p-4 bg-blue-50 rounded-lg">
+                    <div class="text-sm text-blue-600 font-semibold">
+                      Search Relevance
+                    </div>
+                    <div class="text-xs text-gray-600 mt-1">
+                      Content matched to user intent
+                    </div>
+                  </div>
+                  <div class="p-4 bg-green-50 rounded-lg">
+                    <div class="text-sm text-green-600 font-semibold">
+                      Quality Structure
+                    </div>
+                    <div class="text-xs text-gray-600 mt-1">
+                      Well-organized, easy to understand
+                    </div>
+                  </div>
+                  <div class="p-4 bg-pink-50 rounded-lg">
+                    <div class="text-sm text-pink-600 font-semibold">
+                      Trustworthiness
+                    </div>
+                    <div class="text-xs text-gray-600 mt-1">
+                      Reliable, factual information
                     </div>
                   </div>
                 </div>
@@ -1257,208 +865,78 @@
     </section>
 
     <!-- Visual Proof Gallery Section -->
-    <section class="py-20">
+    <section class="py-20 bg-white/30 backdrop-blur-xl">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="text-center mb-16">
           <span
             class="inline-block px-4 py-2 bg-gradient-to-r from-orange-600 to-red-600 text-white text-sm font-medium rounded-full mb-4"
-            >🖼️ Visual Proof</span
+            >🖼️ Ranking Proof</span
           >
           <h2 class="text-5xl font-bold text-gray-900 mb-6">
-            Screenshots & Evidence 📸
+            Ranking Proof & Search Visibility
           </h2>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Real screenshots from Google Search Console, Ahrefs, and Google
-            Analytics proving the rankings and traffic metrics.
+            Real examples of keywords ranking on Google's first page and content
+            contributing to organic search performance.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Gallery Images -->
           <div
-            class="group relative overflow-hidden rounded-3xl border border-white/20 bg-white/70 backdrop-blur-xl cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            class="group relative bg-white/70 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
             onclick="openGalleryModal('1.png')"
           >
-            <div
-              class="aspect-video bg-gradient-to-br from-purple-400 to-pink-400 flex items-center justify-center"
-            >
+            <div class="aspect-video bg-gray-200 overflow-hidden">
               <img
                 src="1.png"
-                alt="Google Search Console Screenshot"
+                alt="Ranking proof 1"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div class="p-4">
-              <h3 class="font-bold text-gray-900">SERP Position #1</h3>
-              <p class="text-sm text-gray-600">Google ranking proof</p>
+              <h3 class="font-semibold text-gray-900">Ranking Proof #1</h3>
+              <p class="text-sm text-gray-600 mt-1">
+                Click to view full screenshot
+              </p>
             </div>
           </div>
 
           <div
-            class="group relative overflow-hidden rounded-3xl border border-white/20 bg-white/70 backdrop-blur-xl cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            class="group relative bg-white/70 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
             onclick="openGalleryModal('11.png')"
           >
-            <div
-              class="aspect-video bg-gradient-to-br from-green-400 to-emerald-400 flex items-center justify-center"
-            >
+            <div class="aspect-video bg-gray-200 overflow-hidden">
               <img
                 src="11.png"
-                alt="Google Analytics Screenshot"
+                alt="Ranking proof 2"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div class="p-4">
-              <h3 class="font-bold text-gray-900">Traffic Analytics</h3>
-              <p class="text-sm text-gray-600">Google Analytics data</p>
+              <h3 class="font-semibold text-gray-900">Ranking Proof #2</h3>
+              <p class="text-sm text-gray-600 mt-1">
+                Click to view full screenshot
+              </p>
             </div>
           </div>
 
           <div
-            class="group relative overflow-hidden rounded-3xl border border-white/20 bg-white/70 backdrop-blur-xl cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            class="group relative bg-white/70 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
             onclick="openGalleryModal('110.png')"
           >
-            <div
-              class="aspect-video bg-gradient-to-br from-blue-400 to-cyan-400 flex items-center justify-center"
-            >
+            <div class="aspect-video bg-gray-200 overflow-hidden">
               <img
                 src="110.png"
-                alt="Ahrefs Screenshot"
+                alt="Ranking proof 3"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div class="p-4">
-              <h3 class="font-bold text-gray-900">SEO Tool Data</h3>
-              <p class="text-sm text-gray-600">Ahrefs metrics</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Timeline Section -->
-    <section class="py-20 bg-white/30 backdrop-blur-xl">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <span
-            class="inline-block px-4 py-2 bg-gradient-to-r from-yellow-600 to-orange-600 text-white text-sm font-medium rounded-full mb-4"
-            >⏰ Growth Journey</span
-          >
-          <h2 class="text-5xl font-bold text-gray-900 mb-6">
-            My SEO Milestones 🎯
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Key achievements and milestones in my SEO and content journey.
-          </p>
-        </div>
-
-        <div class="timeline max-w-4xl mx-auto">
-          <!-- Timeline Item 1 -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <div
-                class="bg-white/70 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:shadow-xl transition-all duration-300"
-              >
-                <span
-                  class="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium mb-3"
-                  >Month 1</span
-                >
-                <h3 class="text-xl font-bold text-gray-900 mb-2">
-                  First Keyword Ranked 🚀
-                </h3>
-                <p class="text-gray-600">
-                  Published first SEO-optimized article and achieved #5 ranking
-                  for a target keyword within 2 weeks.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Timeline Item 2 -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <div
-                class="bg-white/70 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:shadow-xl transition-all duration-300"
-              >
-                <span
-                  class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-3"
-                  >Month 3</span
-                >
-                <h3 class="text-xl font-bold text-gray-900 mb-2">
-                  10K Monthly Visits Milestone ✨
-                </h3>
-                <p class="text-gray-600">
-                  Reached 10,000+ monthly organic visitors with consistent
-                  content publication strategy.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Timeline Item 3 -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <div
-                class="bg-white/70 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:shadow-xl transition-all duration-300"
-              >
-                <span
-                  class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-3"
-                  >Month 6</span
-                >
-                <h3 class="text-xl font-bold text-gray-900 mb-2">
-                  First Featured Snippet 🏆
-                </h3>
-                <p class="text-gray-600">
-                  Captured first Google featured snippet for FAQ-style content
-                  on a high-volume keyword.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Timeline Item 4 -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <div
-                class="bg-white/70 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:shadow-xl transition-all duration-300"
-              >
-                <span
-                  class="inline-block px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-medium mb-3"
-                  >Month 9</span
-                >
-                <h3 class="text-xl font-bold text-gray-900 mb-2">
-                  100+ Keywords Ranked 💯
-                </h3>
-                <p class="text-gray-600">
-                  Achieved ranking for 100+ keywords across various search
-                  volumes and competition levels.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Timeline Item 5 -->
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <div
-                class="bg-white/70 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:shadow-xl transition-all duration-300"
-              >
-                <span
-                  class="inline-block px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm font-medium mb-3"
-                  >Month 12</span
-                >
-                <h3 class="text-xl font-bold text-gray-900 mb-2">
-                  1M+ Impressions Milestone 📊
-                </h3>
-                <p class="text-gray-600">
-                  Exceeded 1 million cumulative impressions across all ranked
-                  keywords in search results.
-                </p>
-              </div>
+              <h3 class="font-semibold text-gray-900">Ranking Proof #3</h3>
+              <p class="text-sm text-gray-600 mt-1">
+                Click to view full screenshot
+              </p>
             </div>
           </div>
         </div>
@@ -1473,30 +951,26 @@
         >
           <!-- Background decorative elements -->
           <div
-            class="absolute inset-0 opacity-10"
-            style="
-              background-image: url(&quot;data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22white%22/></svg>&quot;);
-            "
+            class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"
           ></div>
 
           <div class="relative z-10 text-center">
             <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Boost Your SEO? 🚀
+              Ready to Rank Your Content?
             </h2>
-            <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-              I can help you create content that ranks, drives traffic, and
-              converts. Let's discuss your SEO goals and build a strategy that
-              works.
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              1000+ published articles, 100+ first page rankings, and content
+              featured in Google AI search experiences. Let's create SEO-winning
+              content for your business.
             </p>
-
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="contactme.html"
-                class="group bg-white text-purple-600 px-8 py-4 rounded-2xl font-bold text-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 inline-flex items-center justify-center space-x-2"
+                class="bg-white dark:bg-white/20 text-black dark:text-white px-8 py-4 rounded-2xl font-bold text-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 inline-flex items-center justify-center space-x-2 dark:border dark:border-white/30"
               >
-                <span>Get Started</span>
+                <span>Start Your Project</span>
                 <svg
-                  class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                  class="w-5 h-5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -1509,25 +983,11 @@
                   ></path>
                 </svg>
               </a>
-
               <a
-                href="blogs.html"
-                class="group bg-white/20 backdrop-blur-xl border border-white/30 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white/30 transition-all duration-300 hover:-translate-y-2 inline-flex items-center justify-center space-x-2"
+                href="#ranking-showcase"
+                class="bg-white/20 text-white border-2 border-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white/30 transition-all duration-300 hover:-translate-y-2 inline-flex items-center justify-center space-x-2"
               >
-                <span>Read My Blog</span>
-                <svg
-                  class="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  ></path>
-                </svg>
+                <span>View Rankings</span>
               </a>
             </div>
           </div>
@@ -1546,7 +1006,9 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-white/70 dark:bg-white/5 backdrop-blur-xl border-t border-white/20 dark:border-white/10 py-12 transition-colors duration-300">
+    <footer
+      class="bg-white/70 dark:bg-white/5 backdrop-blur-xl border-t border-white/20 dark:border-white/10 py-12 transition-colors duration-300"
+    >
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="text-center">
           <div class="flex justify-center items-center space-x-2 mb-4">
@@ -1557,10 +1019,14 @@
             </div>
             <span class="text-xl font-bold gradient-text">Gaurav Koli</span>
           </div>
-          <p class="text-lg font-medium mb-2 text-gray-900 dark:text-white transition-colors duration-300">
+          <p
+            class="text-lg font-medium mb-2 text-gray-900 dark:text-white/90 transition-colors duration-300"
+          >
             © 2025 GK. All rights reserved.
           </p>
-          <p class="text-gray-600 dark:text-gray-400 mb-6 transition-colors duration-300">
+          <p
+            class="text-gray-700 dark:text-gray-400 mb-6 transition-colors duration-300"
+          >
             Built with ❤️, lots of ☕, and a touch of ✨ magic
           </p>
 
@@ -1615,22 +1081,22 @@
     <script>
       // Dark Mode Toggle Functionality
       function toggleTheme() {
-        const isDark = document.documentElement.classList.contains('dark');
+        const isDark = document.documentElement.classList.contains("dark");
 
         if (isDark) {
-          document.documentElement.classList.remove('dark');
-          localStorage.setItem('theme', 'light');
+          document.documentElement.classList.remove("dark");
+          localStorage.setItem("theme", "light");
         } else {
-          document.documentElement.classList.add('dark');
-          localStorage.setItem('theme', 'dark');
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("theme", "dark");
         }
       }
 
       // Add theme toggle button event listener
-      document.addEventListener('DOMContentLoaded', function() {
-        const themeToggle = document.getElementById('theme-toggle');
+      document.addEventListener("DOMContentLoaded", function () {
+        const themeToggle = document.getElementById("theme-toggle");
         if (themeToggle) {
-          themeToggle.addEventListener('click', toggleTheme);
+          themeToggle.addEventListener("click", toggleTheme);
         }
       });
     </script>
